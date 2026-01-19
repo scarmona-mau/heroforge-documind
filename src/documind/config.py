@@ -27,6 +27,16 @@ SUPABASE_SERVICE_KEY = get_env("SUPABASE_SERVICE_KEY")
 DEBUG = get_env("DEBUG", "false").lower() == "true"
 LOG_LEVEL = get_env("LOG_LEVEL", "INFO")
 
+# Pipeline Configuration (Session 3)
+CHUNK_SIZE = int(get_env("CHUNK_SIZE", "500"))  # words
+CHUNK_OVERLAP = int(get_env("CHUNK_OVERLAP", "50"))  # words
+OUTPUT_DIR = get_env("OUTPUT_DIR", "output")  # Directory for JSON output
+
+# Future Configuration (Session 4+)
+# EMBEDDING_MODEL = "text-embedding-3-small"  # Session 5
+# EMBEDDING_DIMENSIONS = 1536  # Session 5
+# MAX_PARALLEL_DOCS = 10  # Session 5
+
 
 def validate_config() -> bool:
     """Validate that required configuration is present."""
