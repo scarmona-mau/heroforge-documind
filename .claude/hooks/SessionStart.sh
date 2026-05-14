@@ -25,11 +25,11 @@ mkdir -p "$DIR"
 
 # Find next available file number
 NUMBER=1
-while [ -f "$DIR/claude-convo-$DATE-$NUMBER.md" ]; do
+while [ -f "$DIR/claude-conv-$DATE-$NUMBER.md" ]; do
   NUMBER=$((NUMBER + 1))
 done
 
-FILE="$DIR/claude-convo-$DATE-$NUMBER.md"
+FILE="$DIR/claude-conv-$DATE-$NUMBER.md"
 
 # Create file with header
 cat > "$FILE" <<EOF
